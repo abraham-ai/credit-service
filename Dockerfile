@@ -11,3 +11,4 @@ RUN yarn install --frozen-lockfile
 EXPOSE 8000
 
 ENTRYPOINT ["npx ts-node", "src/index.ts"]
+ 
