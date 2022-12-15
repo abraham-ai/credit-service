@@ -6,6 +6,8 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+RUN yarn global add npx
+RUN yarn global add ts-node
 RUN yarn install --frozen-lockfile
 
 EXPOSE 8000
