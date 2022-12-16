@@ -6,11 +6,10 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN yarn global add npx
-RUN yarn global add ts-node
 RUN yarn install --frozen-lockfile
+RUN yarn build
 
 EXPOSE 8000
 
-ENTRYPOINT ["npx ts-node", "src/index.ts"]
- 
+ENTRYPOINT ["node", "dist/index.js"]
+
